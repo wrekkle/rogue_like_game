@@ -1,0 +1,540 @@
+﻿  test.cpp
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(75,17): error C3615: constexpr 函数“sf::operator +”不能生成常量表达式
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(77,16):
+      失败原因是类型“const sf::+::<lambda_1>”不是有效的文本类型
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(81,5):
+      类型 "sf::+::<lambda_1>" 不是文本类型，因为它不是聚合类型、结束类型，或者没有 constexpr 构造函数(非复制或移动构造函数)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(91,17): error C3615: constexpr 函数“sf::operator -”不能生成常量表达式
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(93,16):
+      失败原因是类型“const sf::-::<lambda_1>”不是有效的文本类型
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(97,5):
+      类型 "sf::-::<lambda_1>" 不是文本类型，因为它不是聚合类型、结束类型，或者没有 constexpr 构造函数(非复制或移动构造函数)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(107,17): error C3615: constexpr 函数“sf::operator *”不能生成常量表达式
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(109,16):
+      失败原因是类型“const sf::*::<lambda_1>”不是有效的文本类型
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(113,5):
+      类型 "sf::*::<lambda_1>" 不是文本类型，因为它不是聚合类型、结束类型，或者没有 constexpr 构造函数(非复制或移动构造函数)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(146,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(147,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(148,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(149,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(150,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(151,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(152,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(153,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Color.inl(154,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\System\Angle.inl(272,31): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\vs\VC\Tools\MSVC\14.42.34433\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34): error C2039: "optional": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\yvals.h(318,1):
+      参见“std”的声明
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(42,7):
+          在编译类模板“sf::Rect”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,42): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34): error C2178: 不能使用“constexpr”说明符声明“sf::Rect<T>::optional”
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,5): warning C4869: "nodiscard" 只可应用于类、枚举和函数
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,100): error C2238: 意外的标记位于“;”之前
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,16): error C2039: "optional": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\yvals.h(318,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,24): error C2988: 不可识别的模板声明/定义
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,24): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,16): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,24): error C2059: 语法错误:“<”
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,30): error C2065: “T”: 未声明的标识符
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,25): error C2923: "sf::Rect": "T" 不是参数 "T" 的有效 模板 类型参数
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,30):
+      参见“T”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,39): error C2065: “T”: 未声明的标识符
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,34): error C2923: "sf::Rect": "T" 不是参数 "T" 的有效 模板 类型参数
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,39):
+      参见“T”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,71): error C2065: “T”: 未声明的标识符
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,66): error C2923: "sf::Rect": "T" 不是参数 "T" 的有效 模板 类型参数
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(71,71):
+      参见“T”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(72,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.inl(72,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(52,35): error C3615: constexpr 函数“sf::Transform::getMatrix”不能生成常量表达式
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(54,25):
+      对未定义的函数或为未声明为“constexpr”的函数的调用导致了故障
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(54,25):
+      请参见“std::array<float,16>::data”的用法
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34): error C2178: 不能使用“constexpr”说明符声明“sf::Rect<float>::optional”
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(101,31): error C2514: “std::array”: 无法构建类模板
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(406,7):
+      参见“std::array”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(107,21):
+      尝试匹配参数列表“(const std::array, int)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(108,21):
+      尝试匹配参数列表“(const std::array, int)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,40): error C2662: “std::array<_Ty,_Size>::size_type std::array<_Ty,_Size>::size(void) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,33):
+      原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,33):
+      转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(503,59):
+      参见“std::array<_Ty,_Size>::size”的声明
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,40):
+      尝试匹配参数列表“()”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,18):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(113,49):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,18):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(114,49):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,18):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(116,49):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,18):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49): error C2678: 二进制“[”: 没有找到接受“const std::array”类型的左操作数的运算符(或没有可接受的转换)
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(539,42):
+      可能是“const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+          “const _Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept const”: 不能将“this”指针从“const std::array”转换为“const std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+              原因如下: 无法从“const std::array”转换为“const std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(531,39):
+      或    “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”
+          D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+          “_Ty &std::array<_Ty,_Size>::operator [](std::array<_Ty,_Size>::size_type) noexcept”: 不能将“this”指针从“const std::array”转换为“std::array<_Ty,_Size> &”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+              原因如下: 无法从“const std::array”转换为“std::array<_Ty,_Size>”
+              D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+              转换要求第二个用户定义的转换运算符或构造函数
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(117,49):
+      尝试匹配参数列表“(const std::array, size_t)”时
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(98,32): error C3615: constexpr 函数“sf::Transform::transformRect”不能生成常量表达式
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(101,22):
+      失败原因是类型“const std::array”不是有效的文本类型
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\array(406,7):
+      类型 "std::array" 不是文本类型，因为它不是聚合类型、结束类型，或者没有 constexpr 构造函数(非复制或移动构造函数)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,39):
+      对未定义的函数或为未声明为“constexpr”的函数的调用导致了故障
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(110,39):
+      请参见“<declval>”的用法
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(98,32):
+      由于控制到达 constexpr 函数的末尾，导致失败
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Transform.inl(234,39): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Rect.hpp(98,34): error C2178: 不能使用“constexpr”说明符声明“sf::Rect<int>::optional”
+  (编译源文件“test.cpp”)
+  
+D:\vs\VC\Tools\MSVC\14.42.34433\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(114,33): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(114,45): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(31,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(114,22): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(114,49): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(137,24): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(137,36): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(31,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(137,13): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(137,40): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(137,5): error C2535: “sf::Texture::Texture(const int)”: 已经定义或声明成员函数
+  (编译源文件“test.cpp”)
+      D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(114,5):
+      参见“sf::Texture::Texture”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,48): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,60): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(31,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,37): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,64): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,117): error C2143: 语法错误: 缺少“)”(在“{”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Texture.hpp(304,119): error C2059: 语法错误:“)”
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(103,30): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(103,42): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(103,19): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(103,46): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(168,48): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(168,60): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(168,37): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Font.hpp(168,64): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(103,31): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+D:\vs\VC\Tools\MSVC\14.42.34433\include\string_view(12): warning STL4038: The contents of <string_view> are available only with C++17 or later.
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(103,43): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(103,20): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(103,47): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(175,48): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(175,60): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(175,37): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(175,64): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(227,46): error C3083: “filesystem”:“::”左侧的符号必须是一种类型
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(227,58): error C2039: "path": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(227,35): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(227,62): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,24): error C2039: "optional": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,32): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,24): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,5): warning C4869: "nodiscard" 只可应用于类、枚举和函数
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,78): error C2039: "string_view": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\unordered_map(23,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Graphics\Image.hpp(245,103): error C2238: 意外的标记位于“;”之前
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\System\Time.inl(282,29): error C7525: 内联变量至少需要 "/std:c++17"
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Window\WindowBase.hpp(226,24): error C2039: "optional": 不是 "std" 的成员
+  (编译源文件“test.cpp”)
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\chrono(45,1):
+      参见“std”的声明
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Window\WindowBase.hpp(226,32): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+  (编译源文件“test.cpp”)
+  
+D:\高程游戏\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\Window\WindowBase.hpp(226,32): error C1003: 错误计数超过 100；正在停止编译
+  (编译源文件“test.cpp”)
+  
