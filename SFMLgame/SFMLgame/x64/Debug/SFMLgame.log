@@ -1,0 +1,28 @@
+﻿  Player.hpp
+D:\cpp\SFMLgame\Player.hpp(51,26): warning C4244: “初始化”: 从“time_t”转换到“long”，可能丢失数据
+  main.cpp
+D:\cpp\SFMLgame\Enemy.hpp(24,48): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+D:\cpp\SFMLgame\Enemy.hpp(24,37): warning C4244: “参数”: 从“T”转换到“float”，可能丢失数据
+D:\cpp\SFMLgame\Enemy.hpp(24,37): warning C4244:         with
+D:\cpp\SFMLgame\Enemy.hpp(24,37): warning C4244:         [
+D:\cpp\SFMLgame\Enemy.hpp(24,37): warning C4244:             T=unsigned int
+D:\cpp\SFMLgame\Enemy.hpp(24,37): warning C4244:         ]
+  (编译源文件“main.cpp”)
+  
+D:\cpp\SFMLgame\Enemy.hpp(43,55): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+D:\cpp\SFMLgame\Enemy.hpp(43,44): warning C4244: “参数”: 从“T”转换到“float”，可能丢失数据
+D:\cpp\SFMLgame\Enemy.hpp(43,44): warning C4244:         with
+D:\cpp\SFMLgame\Enemy.hpp(43,44): warning C4244:         [
+D:\cpp\SFMLgame\Enemy.hpp(43,44): warning C4244:             T=unsigned int
+D:\cpp\SFMLgame\Enemy.hpp(43,44): warning C4244:         ]
+  (编译源文件“main.cpp”)
+  
+D:\cpp\SFMLgame\Player.hpp(51,26): warning C4244: “初始化”: 从“time_t”转换到“long”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+  正在生成代码...
+  SFMLgame.vcxproj -> D:\cpp\SFMLgame\x64\Debug\SFMLgame.exe
