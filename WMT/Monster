@@ -1,0 +1,602 @@
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+
+// 地图尺寸
+const int MAP_WIDTH = 800;
+const int MAP_HEIGHT = 800;
+
+// 玩家类
+class Player {
+public:
+    Player() {
+        // 初始化玩家形状、颜色和位置
+        shape.setSize(sf::Vector2f(50, 50));
+        shape.setFillColor(sf::Color::Blue);
+        shape.setPosition(375, 375);
+        // 初始化玩家生命值和无敌帧
+        health = 5;
+        invincibilityFrames = 0;
+    }
+
+    // 玩家移动函数，考虑边界限制
+    void move(float dx, float dy) {
+        sf::Vector2f newPos = shape.getPosition() + sf::Vector2f(dx, dy);
+        if (newPos.x >= 0 && newPos.x + shape.getSize().x <= static_cast<float>(MAP_WIDTH)) {
+            shape.move(dx, 0);
+        }
+        if (newPos.y >= 0 && newPos.y + shape.getSize().y <= static_cast<float>(MAP_HEIGHT)) {
+            shape.move(0, dy);
+        }
+    }
+
+    // 获取玩家形状
+    sf::RectangleShape getShape() const {
+        return shape;
+    }
+
+    // 获取玩家生命值
+    int getHealth() const {
+        return health;
+    }
+
+    // 减少玩家生命值，同时设置无敌帧
+    void reduceHealth() {
+        if (health > 0 && invincibilityFrames == 0) {
+            health--;
+            invincibilityFrames = 30;
+        }
+    }
+
+    // 更新无敌状态
+    void updateInvincibility() {
+        if (invincibilityFrames > 0) {
+            invincibilityFrames--;
+        }
+    }
+
+    // 重置玩家状态
+    void reset() {
+        shape.setPosition(375, 375);
+        health = 5;
+        invincibilityFrames = 0;
+    }
+
+private:
+    sf::RectangleShape shape;
+    int health;
+    int invincibilityFrames;
+};
+
+// 近战怪物类
+class MeleeMonster {
+public:
+    MeleeMonster() {
+        // 初始化怪物形状、颜色和位置
+        shape.setSize(sf::Vector2f(30, 30));
+        shape.setFillColor(sf::Color::Red);
+        shape.setPosition(rand() % (MAP_WIDTH - 30), rand() % (MAP_HEIGHT - 30));
+    }
+
+    // 怪物向目标移动，考虑边界限制
+    virtual void moveTowards(const sf::Vector2f& target) {
+        sf::Vector2f direction = target - shape.getPosition();
+        float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+        if (length > 0) {
+            direction /= length;
+            sf::Vector2f newPos = shape.getPosition() + direction * 1.0f;
+            if (newPos.x >= 0 && newPos.x + shape.getSize().x <= static_cast<float>(MAP_WIDTH)) {
+                shape.move(direction.x * 1.0f, 0);
+            }
+            if (newPos.y >= 0 && newPos.y + shape.getSize().y <= static_cast<float>(MAP_HEIGHT)) {
+                shape.move(0, direction.y * 1.0f);
+            }
+        }
+    }
+
+    // 获取怪物形状
+    sf::RectangleShape getShape() const {
+        return shape;
+    }
+
+protected:
+    sf::RectangleShape shape;
+};
+
+// 蓝色近战怪物类，继承自 MeleeMonster
+class BlueMeleeMonster : public MeleeMonster {
+public:
+    BlueMeleeMonster() : MeleeMonster() {
+        // 设置蓝色怪物颜色
+        shape.setFillColor(sf::Color::Blue);
+        // 初始化传送冷却时间、变大冷却时间和状态
+        teleportCooldown = 0;
+        enlargeCooldown = 0;
+        isTeleporting = false;
+        teleportTimer = 0;
+        originalSize = shape.getSize();
+        isEnlarged = false;
+        enlargeTimer = 0;
+    }
+
+    // 重写移动函数，实现传送和变大功能
+    void moveTowards(const sf::Vector2f& target) override {
+        if (isTeleporting) {
+            teleportTimer++;
+            if (teleportTimer < 90) {
+                // 1.5 秒内缩小
+                float scaleFactor = 1 - (static_cast<float>(teleportTimer) / 90);
+                shape.setSize(sf::Vector2f(originalSize.x * scaleFactor, originalSize.y * scaleFactor));
+            }
+            else {
+                // 传送完成，恢复大小和状态
+                sf::Vector2f newPos = target;
+                newPos.x -= shape.getSize().x / 2;
+                newPos.y -= shape.getSize().y / 2;
+                shape.setPosition(newPos);
+                shape.setSize(originalSize);
+                isTeleporting = false;
+                teleportTimer = 0;
+                teleportCooldown = 600;
+            }
+            return;
+        }
+
+        if (teleportCooldown > 0) {
+            teleportCooldown--;
+        }
+        else if (rand() % 100 == 0) {
+            // 1% 概率传送
+            isTeleporting = true;
+            teleportTimer = 0;
+        }
+
+        if (enlargeCooldown > 0) {
+            enlargeCooldown--;
+        }
+        else if (rand() % 100 == 0) {
+            // 1% 概率变大
+            shape.setSize(sf::Vector2f(60, 60));
+            enlargeCooldown = 600;
+            isEnlarged = true;
+            enlargeTimer = 0;
+        }
+
+        if (isEnlarged) {
+            enlargeTimer++;
+            if (enlargeTimer >= 180) {
+                // 3 秒后恢复大小
+                shape.setSize(originalSize);
+                isEnlarged = false;
+                enlargeTimer = 0;
+            }
+        }
+
+        if (!isTeleporting) {
+            MeleeMonster::moveTowards(target);
+        }
+    }
+
+private:
+    int teleportCooldown;
+    int enlargeCooldown;
+    bool isTeleporting;
+    int teleportTimer;
+    sf::Vector2f originalSize;
+    bool isEnlarged;
+    int enlargeTimer;
+};
+
+// 红色近战怪物类，继承自 MeleeMonster
+class RedMeleeMonster : public MeleeMonster {
+public:
+    RedMeleeMonster() : MeleeMonster() {
+        // 设置红色怪物颜色
+        shape.setFillColor(sf::Color::Red);
+        // 初始化变大冷却时间和状态
+        enlargeCooldown = 0;
+        isEnlarged = false;
+        enlargeTimer = 0;
+        originalSize = shape.getSize();
+    }
+
+    // 重写移动函数，实现变大功能
+    void moveTowards(const sf::Vector2f& target) override {
+        if (enlargeCooldown > 0) {
+            enlargeCooldown--;
+        }
+        else if (rand() % 100 == 0) {
+            // 1% 概率变大
+            shape.setSize(sf::Vector2f(60, 60));
+            enlargeCooldown = 600;
+            isEnlarged = true;
+            enlargeTimer = 0;
+        }
+
+        if (isEnlarged) {
+            enlargeTimer++;
+            if (enlargeTimer >= 180) {
+                // 3 秒后恢复大小
+                shape.setSize(originalSize);
+                isEnlarged = false;
+                enlargeTimer = 0;
+            }
+        }
+
+        MeleeMonster::moveTowards(target);
+    }
+
+private:
+    int enlargeCooldown;
+    bool isEnlarged;
+    int enlargeTimer;
+    sf::Vector2f originalSize;
+};
+
+// 黄色近战怪物类，继承自 MeleeMonster
+class YellowMeleeMonster : public MeleeMonster {
+public:
+    YellowMeleeMonster() : MeleeMonster() {
+        // 设置黄色怪物颜色
+        shape.setFillColor(sf::Color::Yellow);
+    }
+
+    // 重写移动函数
+    void moveTowards(const sf::Vector2f& target) override {
+        MeleeMonster::moveTowards(target);
+    }
+};
+
+// 子弹类
+class Bullet {
+public:
+    Bullet(const sf::Vector2f& startPos, const sf::Vector2f& target) {
+        // 初始化子弹形状、颜色和位置
+        shape.setSize(sf::Vector2f(5, 5));
+        shape.setFillColor(sf::Color::Yellow);
+        shape.setPosition(startPos);
+        // 计算子弹速度和方向
+        sf::Vector2f direction = target - startPos;
+        float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+        if (length > 0) {
+            direction /= length;
+            velocity = direction * 5.0f;
+        }
+    }
+
+    // 子弹移动函数
+    void move() {
+        shape.move(velocity);
+    }
+
+    // 获取子弹形状
+    sf::RectangleShape getShape() const {
+        return shape;
+    }
+
+private:
+    sf::RectangleShape shape;
+    sf::Vector2f velocity;
+};
+
+// 远程怪物类
+class RangedMonster {
+public:
+    RangedMonster() {
+        // 初始化远程怪物形状、颜色和位置
+        shape.setSize(sf::Vector2f(30, 30));
+        shape.setFillColor(sf::Color::Magenta);
+        shape.setPosition(rand() % (MAP_WIDTH - 30), rand() % (MAP_HEIGHT - 30));
+        // 初始化射击计时器
+        shootTimer = 0;
+    }
+
+    // 远程怪物向目标移动，考虑边界限制
+    void moveTowards(const sf::Vector2f& target) {
+        sf::Vector2f direction = target - shape.getPosition();
+        float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+        if (length > 0) {
+            direction /= length;
+            sf::Vector2f newPos = shape.getPosition() + direction * 0.8f;
+            if (newPos.x >= 0 && newPos.x + shape.getSize().x <= static_cast<float>(MAP_WIDTH)) {
+                shape.move(direction.x * 0.8f, 0);
+            }
+            if (newPos.y >= 0 && newPos.y + shape.getSize().y <= static_cast<float>(MAP_HEIGHT)) {
+                shape.move(0, direction.y * 0.8f);
+            }
+        }
+    }
+
+    // 远程怪物射击函数
+    void shoot(const sf::Vector2f& target, std::vector<Bullet>& bullets) {
+        shootTimer++;
+        if (shootTimer >= 60) {
+            // 每 60 帧射击一次
+            bullets.emplace_back(shape.getPosition(), target);
+            shootTimer = 0;
+        }
+    }
+
+    // 获取远程怪物形状
+    sf::RectangleShape getShape() const {
+        return shape;
+    }
+
+private:
+    sf::RectangleShape shape;
+    int shootTimer;
+};
+
+// 碰撞检测函数
+bool isCollision(const sf::RectangleShape& rect1, const sf::RectangleShape& rect2) {
+    return rect1.getGlobalBounds().intersects(rect2.getGlobalBounds());
+}
+
+// 重新开始游戏函数
+void restartGame(Player& player, std::vector<BlueMeleeMonster>& blueMonsters, std::vector<RedMeleeMonster>& redMonsters, std::vector<YellowMeleeMonster>& yellowMonsters, std::vector<RangedMonster>& rangedMonsters) {
+    player.reset();
+    blueMonsters.clear();
+    redMonsters.clear();
+    yellowMonsters.clear();
+    rangedMonsters.clear();
+    // 重新生成初始怪物
+    for (int i = 0; i < 1; ++i) {
+        blueMonsters.emplace_back();
+    }
+    for (int i = 0; i < 1; ++i) {
+        redMonsters.emplace_back();
+    }
+    for (int i = 0; i < 1; ++i) {
+        yellowMonsters.emplace_back();
+    }
+    for (int i = 0; i < 2; ++i) {
+        rangedMonsters.emplace_back();
+    }
+}
+
+// 进入下一层函数
+void nextLevel(Player& player, std::vector<BlueMeleeMonster>& blueMonsters, std::vector<RedMeleeMonster>& redMonsters, std::vector<YellowMeleeMonster>& yellowMonsters, std::vector<RangedMonster>& rangedMonsters) {
+    player.reset();
+    blueMonsters.clear();
+    redMonsters.clear();
+    yellowMonsters.clear();
+    rangedMonsters.clear();
+    // 下一层增加怪物数量
+    for (int i = 0; i < 2; ++i) {
+        blueMonsters.emplace_back();
+    }
+    for (int i = 0; i < 2; ++i) {
+        redMonsters.emplace_back();
+    }
+    for (int i = 0; i < 2; ++i) {
+        yellowMonsters.emplace_back();
+    }
+    for (int i = 0; i < 3; ++i) {
+        rangedMonsters.emplace_back();
+    }
+}
+
+int main() {
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    sf::RenderWindow window(sf::VideoMode(MAP_WIDTH, MAP_HEIGHT), "2D Game");
+    window.setFramerateLimit(60);
+
+    Player player;
+    std::vector<BlueMeleeMonster> blueMonsters;
+    std::vector<RedMeleeMonster> redMonsters;
+    std::vector<YellowMeleeMonster> yellowMonsters;
+    std::vector<RangedMonster> rangedMonsters;
+    std::vector<Bullet> bullets;
+
+    // 初始化怪物
+    for (int i = 0; i < 1; ++i) {
+        blueMonsters.emplace_back();
+    }
+    for (int i = 0; i < 1; ++i) {
+        redMonsters.emplace_back();
+    }
+    for (int i = 0; i < 1; ++i) {
+        yellowMonsters.emplace_back();
+    }
+    for (int i = 0; i < 2; ++i) {
+        rangedMonsters.emplace_back();
+    }
+
+    sf::Font font;
+    if (!font.loadFromFile("arial.ttf")) {
+        std::cerr << "Could not load font!" << std::endl;
+        return 1;
+    }
+
+    sf::Text healthText;
+    healthText.setFont(font);
+    healthText.setCharacterSize(24);
+    healthText.setFillColor(sf::Color::White);
+    healthText.setPosition(10, 10);
+
+    sf::Text gameOverText;
+    gameOverText.setFont(font);
+    gameOverText.setCharacterSize(48);
+    gameOverText.setFillColor(sf::Color::Red);
+    gameOverText.setString("Game Over!");
+    gameOverText.setPosition(MAP_WIDTH / 2 - gameOverText.getGlobalBounds().width / 2, MAP_HEIGHT / 2 - 50);
+
+    sf::RectangleShape restartButton(sf::Vector2f(200, 50));
+    restartButton.setFillColor(sf::Color::Green);
+    restartButton.setPosition(MAP_WIDTH / 2 - 100, MAP_HEIGHT / 2 + 20);
+
+    sf::Text restartText;
+    restartText.setFont(font);
+    restartText.setCharacterSize(24);
+    restartText.setFillColor(sf::Color::White);
+    restartText.setString("Restart");
+    restartText.setPosition(MAP_WIDTH / 2 - restartText.getGlobalBounds().width / 2, MAP_HEIGHT / 2 + 35);
+
+    sf::Text nextLevelText;
+    nextLevelText.setFont(font);
+    nextLevelText.setCharacterSize(48);
+    nextLevelText.setFillColor(sf::Color::Green);
+    nextLevelText.setString("Next Level!");
+    nextLevelText.setPosition(MAP_WIDTH / 2 - nextLevelText.getGlobalBounds().width / 2, MAP_HEIGHT / 2 - 50);
+
+    sf::RectangleShape nextLevelButton(sf::Vector2f(200, 50));
+    nextLevelButton.setFillColor(sf::Color::Green);
+    nextLevelButton.setPosition(MAP_WIDTH / 2 - 100, MAP_HEIGHT / 2 + 20);
+
+    sf::Text nextLevelConfirmText;
+    nextLevelConfirmText.setFont(font);
+    nextLevelConfirmText.setCharacterSize(24);
+    nextLevelConfirmText.setFillColor(sf::Color::White);
+    nextLevelConfirmText.setString("Continue");
+    nextLevelConfirmText.setPosition(MAP_WIDTH / 2 - nextLevelConfirmText.getGlobalBounds().width / 2, MAP_HEIGHT / 2 + 35);
+
+    bool gameOver = false;
+    bool nextLevelAvailable = false;
+    int survivalTimer = 0;
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                window.close();
+            if (event.type == sf::Event::MouseButtonPressed) {
+                sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                if (gameOver && restartButton.getGlobalBounds().contains(mousePos)) {
+                    restartGame(player, blueMonsters, redMonsters, yellowMonsters, rangedMonsters);
+                    bullets.clear();
+                    gameOver = false;
+                    survivalTimer = 0;
+                }
+                if (nextLevelAvailable && nextLevelButton.getGlobalBounds().contains(mousePos)) {
+                    nextLevel(player, blueMonsters, redMonsters, yellowMonsters, rangedMonsters);
+                    bullets.clear();
+                    nextLevelAvailable = false;
+                    survivalTimer = 0;
+                }
+            }
+        }
+
+        if (!gameOver && !nextLevelAvailable) {
+            // 玩家移动
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+                player.move(-5, 0);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+                player.move(5, 0);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+                player.move(0, -5);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+                player.move(0, 5);
+
+            player.updateInvincibility();
+
+            // 蓝色近战怪物移动和碰撞检测
+            for (auto& blueMonster : blueMonsters) {
+                blueMonster.moveTowards(player.getShape().getPosition());
+                if (isCollision(player.getShape(), blueMonster.getShape())) {
+                    player.reduceHealth();
+                }
+            }
+
+            // 红色近战怪物移动和碰撞检测
+            for (auto& redMonster : redMonsters) {
+                redMonster.moveTowards(player.getShape().getPosition());
+                if (isCollision(player.getShape(), redMonster.getShape())) {
+                    player.reduceHealth();
+                }
+            }
+
+            // 黄色近战怪物移动和碰撞检测
+            for (auto& yellowMonster : yellowMonsters) {
+                yellowMonster.moveTowards(player.getShape().getPosition());
+                if (isCollision(player.getShape(), yellowMonster.getShape())) {
+                    player.reduceHealth();
+                }
+            }
+
+            // 远程怪物移动和射击
+            for (auto& rangedMonster : rangedMonsters) {
+                rangedMonster.moveTowards(player.getShape().getPosition());
+                rangedMonster.shoot(player.getShape().getPosition(), bullets);
+            }
+
+            // 子弹移动和碰撞检测
+            for (auto it = bullets.begin(); it != bullets.end();) {
+                it->move();
+                if (isCollision(player.getShape(), it->getShape())) {
+                    player.reduceHealth();
+                    it = bullets.erase(it);
+                }
+                else if (it->getShape().getPosition().x < 0 || it->getShape().getPosition().x > static_cast<float>(MAP_WIDTH) ||
+                    it->getShape().getPosition().y < 0 || it->getShape().getPosition().y > static_cast<float>(MAP_HEIGHT)) {
+                    it = bullets.erase(it);
+                }
+                else {
+                    ++it;
+                }
+            }
+
+            if (player.getHealth() <= 0) {
+                gameOver = true;
+            }
+            else {
+                survivalTimer++;
+                if (survivalTimer >= 600) { // 600 帧 = 10 秒
+                    nextLevelAvailable = true;
+                }
+            }
+
+            healthText.setString("Health: " + std::to_string(player.getHealth()));
+        }
+
+        window.clear();
+
+        if (!gameOver && !nextLevelAvailable) {
+            // 绘制玩家
+            window.draw(player.getShape());
+            // 绘制蓝色近战怪物
+            for (const auto& blueMonster : blueMonsters) {
+                window.draw(blueMonster.getShape());
+            }
+            // 绘制红色近战怪物
+            for (const auto& redMonster : redMonsters) {
+                window.draw(redMonster.getShape());
+            }
+            // 绘制黄色近战怪物
+            for (const auto& yellowMonster : yellowMonsters) {
+                window.draw(yellowMonster.getShape());
+            }
+            // 绘制远程怪物
+            for (const auto& rangedMonster : rangedMonsters) {
+                window.draw(rangedMonster.getShape());
+            }
+            // 绘制子弹
+            for (const auto& bullet : bullets) {
+                window.draw(bullet.getShape());
+            }
+            // 绘制生命值文本
+            window.draw(healthText);
+        }
+        else if (nextLevelAvailable) {
+            // 绘制下一层提示文本
+            window.draw(nextLevelText);
+            // 绘制下一层确认按钮
+            window.draw(nextLevelButton);
+            window.draw(nextLevelConfirmText);
+        }
+        else {
+            // 绘制游戏结束文本
+            window.draw(gameOverText);
+            // 绘制重新开始按钮
+            window.draw(restartButton);
+            window.draw(restartText);
+        }
+
+        window.display();
+    }
+
+    return 0;
+}
