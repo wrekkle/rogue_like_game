@@ -1,0 +1,160 @@
+﻿  enemy.cpp
+D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(6,11): error C2374: “SCREEN_WIDTH”: 重定义；多次初始化
+  (编译源文件“enemy.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(13,11):
+      参见“SCREEN_WIDTH”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(7,11): error C2374: “SCREEN_HEIGHT”: 重定义；多次初始化
+  (编译源文件“enemy.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(14,11):
+      参见“SCREEN_HEIGHT”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\enemy.cpp(6,13): error C2374: “PI”: 重定义；多次初始化
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(15,13):
+      参见“PI”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\enemy.cpp(45,26): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\高程游戏\rogue_like_game\newtest\newtest\enemy.cpp(109,26): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\高程游戏\rogue_like_game\newtest\newtest\enemy.cpp(137,25): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  game.cpp
+D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(6,11): error C2374: “SCREEN_WIDTH”: 重定义；多次初始化
+  (编译源文件“game.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(13,11):
+      参见“SCREEN_WIDTH”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(7,11): error C2374: “SCREEN_HEIGHT”: 重定义；多次初始化
+  (编译源文件“game.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(14,11):
+      参见“SCREEN_HEIGHT”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.h(11,6): error C2011: “RobotType”:“enum”类型重定义
+  (编译源文件“game.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(26,12):
+      参见“RobotType”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(10,21): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(38,22): error C2079: “stateManager”使用未定义的 class“GameStateManager”
+D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(38,34): error C2440: “初始化”: 无法从“sf::Font”转换为“int”
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(38,34):
+      没有可用于执行该转换的用户定义的转换运算符，或者无法调用该运算符
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(39,47): error C2065: “MainMenuState”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(39,35): error C2672: “std::make_unique”: 未找到匹配的重载函数
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(3607,6):
+      可能是“void std::make_unique(_Types ...)”
+          D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(39,47):
+          “std::make_unique”:“_Ty”的 模板 参数无效，应为类型
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(3601,57):
+      或    “std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(const size_t)”
+          D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(39,47):
+          “std::make_unique”:“_Ty”的 模板 参数无效，应为类型
+      D:\vs\VC\Tools\MSVC\14.42.34433\include\memory(3596,57):
+      或    “std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(_Types ...)”
+          D:\高程游戏\rogue_like_game\newtest\newtest\game.cpp(39,47):
+          “std::make_unique”:“_Ty”的 模板 参数无效，应为类型
+  
+  gamestate.cpp
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(13,11): error C2374: “SCREEN_WIDTH”: 重定义；多次初始化
+  (编译源文件“gamestate.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(6,11):
+      参见“SCREEN_WIDTH”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(14,11): error C2374: “SCREEN_HEIGHT”: 重定义；多次初始化
+  (编译源文件“gamestate.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(7,11):
+      参见“SCREEN_HEIGHT”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.h(11,6): error C2011: “RobotType”:“enum”类型重定义
+  (编译源文件“gamestate.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(26,12):
+      参见“RobotType”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\gamestate.cpp(3,93): error C2027: 使用了未定义类型“RobotType”
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(26,12):
+      参见“RobotType”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\gamestate.cpp(3,93): error C2065: “TYPE1”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\gamestate.cpp(5,12): error C2039: "setPosition": 不是 "Player" 的成员
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.h(14,7):
+      参见“Player”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\gamestate.cpp(32,58): error C2039: "isOffScreen": 不是 "Bullet" 的成员
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(9,7):
+      参见“Bullet”的声明
+  
+  player.cpp
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(13,11): error C2374: “SCREEN_WIDTH”: 重定义；多次初始化
+  (编译源文件“player.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(6,11):
+      参见“SCREEN_WIDTH”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(14,11): error C2374: “SCREEN_HEIGHT”: 重定义；多次初始化
+  (编译源文件“player.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(7,11):
+      参见“SCREEN_HEIGHT”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.h(11,6): error C2011: “RobotType”:“enum”类型重定义
+  (编译源文件“player.cpp”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(26,12):
+      参见“RobotType”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(14,10): error C2065: “TYPE1”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(14,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(14,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(21,10): error C2065: “TYPE2”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(21,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(21,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(28,10): error C2065: “TYPE3”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(28,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(28,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(14,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(21,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(28,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(35,5): warning C4060: switch 语句没有包含“case”或“default”标签
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(51,30): error C2065: “TYPE3”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(92,10): error C2065: “TYPE1”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(92,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(92,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(96,10): error C2065: “TYPE2”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(96,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(96,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(99,10): error C2065: “TYPE3”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(99,10): error C2131: 表达式的计算结果不是常数
+      D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(99,10):
+      遇到非常量(子)表达式
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(106,29): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(92,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(96,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(99,10): error C2051: case 表达式不是常量
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(103,5): warning C4060: switch 语句没有包含“case”或“default”标签
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(157,26): error C2065: “TYPE1”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(162,31): error C2065: “TYPE2”: 未声明的标识符
+D:\高程游戏\rogue_like_game\newtest\newtest\player.cpp(166,31): error C2065: “TYPE3”: 未声明的标识符
+  player.h
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(13,11): error C2374: “SCREEN_WIDTH”: 重定义；多次初始化
+  (编译源文件“player.h”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(6,11):
+      参见“SCREEN_WIDTH”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\game.h(14,11): error C2374: “SCREEN_HEIGHT”: 重定义；多次初始化
+  (编译源文件“player.h”)
+      D:\高程游戏\rogue_like_game\newtest\newtest\bullet.h(7,11):
+      参见“SCREEN_HEIGHT”的声明
+  
+D:\高程游戏\rogue_like_game\newtest\newtest\player.h(11,6): error C2011: “RobotType”:“enum”类型重定义
+      D:\高程游戏\rogue_like_game\newtest\newtest\game.h(26,12):
+      参见“RobotType”的声明
+  
+  prop.cpp
+  正在生成代码...
